@@ -1,0 +1,12 @@
+{
+  "name": "fire-tac-toe",
+  "displayName": "fire-tac-toe",
+  "expo": {
+    "name": "fire-tac-toe",
+    "slug": "fire-tac-toe",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
