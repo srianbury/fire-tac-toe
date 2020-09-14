@@ -17,7 +17,8 @@ const STYLES = StyleSheet.create({
   },
   w100: {
     width: "100%"
-  }
+  },
+  purple: "#841584"
 });
 
 export default STYLES;

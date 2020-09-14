@@ -31,7 +31,7 @@ const LoginView = ({ username, setUsername, login }) => (
     <Button
       onPress={() => login(username)}
       title="Login"
-      color="#841584"
+      color={STYLES.purple}
       accessibilityLabel="Press to login"
     />
   </View>
