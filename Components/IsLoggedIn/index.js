@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Button, Text, TextInput, View } from "react-native";
 import AuthenticationContext from "../Authentication";
-import { STYLES } from "../../Constants/";
+import { STYLES, COLORS } from "../../Constants/";
 
 const IsLoggedInContainer = ({ children }) => {
   const { user, login } = useContext(AuthenticationContext);
@@ -31,7 +31,7 @@ const LoginView = ({ username, setUsername, login }) => (
     <Button
       onPress={() => login(username)}
       title="Login"
-      color={STYLES.purple}
+      color={COLORS.purple}
       accessibilityLabel="Press to login"
     />
   </View>
