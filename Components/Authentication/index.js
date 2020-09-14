@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const AuthenticationContext = createContext();
 const AuthenticationProviderContainer = ({ children }) => {
@@ -7,7 +8,7 @@ const AuthenticationProviderContainer = ({ children }) => {
   function login(username) {
     setUser({
       username,
-      id: "TODO"
+      id: uuidv4()
     });
   }
 
