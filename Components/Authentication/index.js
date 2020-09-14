@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react";
 
 const AuthenticationContext = createContext();
-const AuthenticationProvider = ({ children }) => {
+const AuthenticationProviderContainer = ({ children }) => {
   const [user, setUser] = useState(null);
 
   function login(username) {
@@ -12,16 +12,22 @@ const AuthenticationProvider = ({ children }) => {
   }
 
   return (
-    <AuthenticationContext.Provider
-      value={{
-        user,
-        login
-      }}
-    >
+    <AuthenticationProviderView user={user} login={login}>
       {children}
-    </AuthenticationContext.Provider>
+    </AuthenticationProviderView>
   );
 };
 
+const AuthenticationProviderView = ({ user, login, children }) => (
+  <AuthenticationContext.Provider
+    value={{
+      user,
+      login
+    }}
+  >
+    {children}
+  </AuthenticationContext.Provider>
+);
+
 export default AuthenticationContext;
-export { AuthenticationProvider };
+export { AuthenticationProviderContainer as AuthenticationProvider };
